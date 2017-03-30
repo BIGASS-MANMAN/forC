@@ -1,0 +1,8 @@
+make: 경고: '1.c' 파일의 변경 시각(56705)이 미래입니다
+gcc -Wall -g -I.   1.c   -o 1
+gcc -Wall -g -I.   3.c   -o 3
+gcc -Wall -g -I.   enc_2.c   -o enc_2
+gcc -Wall -g -I.   enc_3.c   -o enc_3
+gcc -Wall -g -I.   2.c   -o 2
+gcc -Wall -g -I.   enc_1.c   -o enc_1
+make: 경고:  시계가 잘못되었음이 발견되었습니다.  빌드가 불완전할 수 있습니다.
