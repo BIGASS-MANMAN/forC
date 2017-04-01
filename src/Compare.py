@@ -41,8 +41,10 @@ for i in range(1,int(NUMBER)+1):
 		while True:
 			line = f[i].readline()
 			line2 = f2[i].readline()
+			print(line+"\n"+line2)
 			if line != line2 :
 				result[str(i)] = False
+				print("line not\n")
 				break
 			if not line or not line2 :
 				result[str(i)] = True
