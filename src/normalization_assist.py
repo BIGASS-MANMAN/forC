@@ -11,9 +11,9 @@ Path = "../Assistant/"+TITLE+"/"
 
 connection = pymongo.MongoClient()
 db = connection.get_database("cprog")
-collections = db.get_collection("question")
-collection = collections.find({"Title":TITLE})
-col = collection.distinct("SubQuestion")
+collections = db.get_collection("boards")
+collection = collections.find({"title":TITLE})
+col = collection.distinct("subquestion")
 comp = "".join(col)
 comp = comp.split(',')
 

@@ -11,11 +11,11 @@ Path2 = "../Assistant/"+TITLE
 
 connection = pymongo.MongoClient()
 db = connection.get_database("cprog")
-col_question = db.get_collection("question")
+col_question = db.get_collection("boards")
 col_result = db.get_collection("result")
-question_info = col_question.find({"Title" : TITLE})
+question_info = col_question.find({"title" : TITLE})
 
-Subquestion_info = question_info[0]["SubQuestion"]
+Subquestion_info = question_info[0]["subquestion"]
 SubCount = question_info[0]["Cnt"]
 
 f = {}
@@ -50,7 +50,7 @@ for i in range(1,int(NUMBER)+1):
 				result[str(i)] = True
 				break
 
-Result = {"Title" : TITLE, "Cnt" : int(NUMBER), "Result" : result, "ID" : STUDENT}
+Result = {"title" : TITLE, "cnt" : int(NUMBER), "result" : result, "id" : STUDENT}
 col_result.insert(Result)
 
 	
